@@ -7,7 +7,7 @@ def index():
 
 @app.route('/get_result', methods=['GET'])
 def get_result():
-    res = 'Good posture'
+    res = 'Healthy'
     if request.args.get("ax")==request.args.get("ay")==request.args.get("az"):
-        res="Bad posture"
+        res="Unhealthy"
     return {"result": res, "msg": "Success"}
